@@ -1,48 +1,47 @@
-@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: muli;
+  scroll-behavior:smooth;
 }
 
-.navbar {
-  background-color: #fff !important;
+body {
+  background-color: var(--color-bg);
 }
 
-.navbar .navbar-brand {
-  font-size: 1.9rem !important;
-  color: #565387;
+a{
+  color: unset;
+  text-decoration: none;
 }
 
-.navbar-light .navbar-nav .nav-link.active,
-.navbar-light .navbar-nav .show>.nav-link{
-color: #565387;
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
-.navbar a {
-  
-  font-size: 1.3rem !important;
-  text-transform: capitalize;
+.bg-light {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
 }
-.active {
-  font-weight: bold;
-  border-bottom: 1px solid #565387;
-}
+.gradient__bg
+{
 
-.navbar a:hover { 
-  color: #3498db;
-}
+  background:-moz-radial-gradient(circle at 3% 25%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
 
-@media(max-width:991px) {
-  .navbar-brand {
-    font-size: 1.5rem !important;
-  }
+  /* safari 5.1+,chrome 10+ */
+  background:-webkit-radial-gradient(circle at 3% 25%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
 
-  .active {
-    font-weight: bold;
-    border-bottom: none;
-  }
+  /* opera 11.10+ */
+  background:-o-radial-gradient(circle at 3% 25%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+
+  /* ie 10+ */
+  background:-ms-radial-gradient(circle at 3% 25%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+
+  /* global 92%+ browsers support */
+  background:radial-gradient(circle at 3% 25%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
 }
 
 .blue-btn a {
@@ -110,4 +109,26 @@ color: #565387;
   100% {
     transform: translateY(-10px);
   }
+}
+
+.text__justify p {
+  margin: 0;
+  text-align: justify;
+}
+.text__justify h2 {
+  padding: 2rem;
+}
+
+.bg__image{
+  background-image: url('./Images/b2.jpg'), linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+}
+
+.jarallax {
+  position: relative;
+  z-index: 0;
+}
+
+.bg__dark {
+  opacity: 25;
+  background-color: #131022 !important;
 }

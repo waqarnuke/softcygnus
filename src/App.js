@@ -2,19 +2,23 @@ import React from 'react';
 import logo from './logo.svg';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle';
+
 import './App.css';
-import Home from './Home';
-import About from './About';
-import Service from './Service';
-import Contact from './Contact';
-import Navbar from './Navbar';
+import './index.css';
+
+
 import { Routes, Route } from 'react-router-dom';
 
+import {Navbar,Strap,Footer} from './Component';
+import {Home, About, Contact, Service } from './Pages';
 
 const App = () => {
   return (
     <>
-    <Routes>
+    <div className='app'>
+      <div className='gradient__bg'>
+      <Strap/>
+      <Routes>
       <Route path="/" element={<Navbar />}>
        <Route index element={<Home />} />
        <Route path="About" element={<About />} />
@@ -24,7 +28,12 @@ const App = () => {
        
       </Route>
     </Routes>
-       
+    <Footer/>
+      </div>
+    </div>
+    
+    {/* 
+        */}
     </>
   );
 }

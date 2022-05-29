@@ -1,14 +1,15 @@
 import React from 'react'
+import './navbar.css';
+
 import {Link, NavLink,  Outlet } from "react-router-dom";
+
 
 const Navbar = () => {
   return (
     <>
-      <div className='container-fluid nav-bg'>
-        <div className='row'>
-          <div className='col-10 mx-auto'>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
-              <div className="container-fluid">
+    
+    <nav className="sticky-top navbar navbar-expand-lg navbar-light">
+              <div className="container">
                 <Link className="navbar-brand" to="/">
                     SoftCygnus
                 </Link>
@@ -32,16 +33,9 @@ const Navbar = () => {
                   </ul>
                 </div>
               </div>
-            </nav>
-        </div>
-        </div>
-        <div>
-           {/* An <Outlet> renders whatever child route is currently active,
-          so you can think about this <Outlet> as a placeholder for
-          the child routes we defined above. */}
-        <Outlet />
-        </div>
-      </div>
+    </nav>
+            <Outlet />
+            
     </>
    
   )
